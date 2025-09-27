@@ -5,28 +5,28 @@ import teamLargeGroup from "@/assets/team-large-group.jpg";
 const TimelineSection = () => {
   const timelineEvents = [
     {
-      year: "2020",
+      year: "2008",
       title: "Fundação",
-      description: "Início das operações com foco em excelência",
+      description: "Início das atividades com foco em atendimento personalizado",
       icon: Calendar
     },
     {
-      year: "2021",
-      title: "Expansão Nacional",
-      description: "Quase 200 pessoas, nova sede, ranking melhores empresas para trabalhar",
+      year: "2015",
+      title: "Expansão dos Serviços",
+      description: "Ampliação da carteira de clientes e serviços especializados",
       icon: Users,
       featured: true
     },
     {
-      year: "2022",
-      title: "Parcerias Estratégicas",
-      description: "Filiação à rede PrimeGlobal e expansão internacional",
+      year: "2020",
+      title: "Digitalização Completa",
+      description: "Modernização total dos processos e atendimento 100% digital",
       icon: Award
     },
     {
-      year: "2023",
-      title: "Liderança de Mercado",
-      description: "Consolidação como referência em contabilidade corporativa",
+      year: "2024",
+      title: "Consolidação",
+      description: "Referência em contabilidade com mais de 500 clientes ativos",
       icon: TrendingUp
     }
   ];

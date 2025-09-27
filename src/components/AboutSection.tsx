@@ -6,23 +6,23 @@ const AboutSection = () => {
   const features = [
     {
       icon: MapPin,
-      title: "Presença Nacional",
-      description: "Sedes em Goiânia, São Paulo, Rio de Janeiro, Cuiabá, Patos de Minas"
+      title: "Localização Estratégica",
+      description: "Atendimento presencial e remoto para todo o Brasil"
     },
     {
       icon: Shield,
-      title: "Compliance & Redução de Riscos",
-      description: "Especialistas em conformidade fiscal e tributária"
+      title: "Conformidade Fiscal",
+      description: "Especialistas em legislação tributária e compliance"
     },
     {
       icon: Award,
-      title: "Parcerias Estratégicas",
-      description: "Grandes empresas nacionais e internacionais"
+      title: "Atendimento Personalizado",
+      description: "Cada cliente recebe atenção dedicada e soluções customizadas"
     },
     {
       icon: TrendingUp,
-      title: "Sustentabilidade dos Negócios",
-      description: "Foco na continuidade e crescimento empresarial"
+      title: "Crescimento do Negócio",
+      description: "Consultoria estratégica para impulsionar resultados"
     }
   ];
 
@@ -50,15 +50,15 @@ const AboutSection = () => {
                 QUEM SOMOS
               </h2>
               <h3 className="text-4xl lg:text-5xl font-bold text-neutral-900 font-heading mb-6">
-                Somos a{" "}
-                <span className="text-planning-green">Planning</span>
+                Conheça a{" "}
+                <span className="text-planning-green">Lucimara Rocha</span>
               </h3>
               <p className="text-lg text-neutral-600 leading-relaxed mb-8">
-                A Planning é uma empresa de contabilidade corporativa multissetorial 
-                com expertise consolidada em serviços contábeis e tributários. 
-                Desenvolvemos parcerias estratégicas com grandes empresas nacionais 
-                e internacionais, sempre com foco na redução de riscos, compliance 
-                e sustentabilidade dos negócios.
+                O escritório Lucimara Rocha Contabilidade oferece serviços contábeis 
+                especializados com mais de 15 anos de experiência no mercado. 
+                Nosso compromisso é fornecer soluções personalizadas e eficientes 
+                para empresas de todos os portes, sempre com foco na excelência 
+                do atendimento e na conformidade fiscal.
               </p>
             </div>
 

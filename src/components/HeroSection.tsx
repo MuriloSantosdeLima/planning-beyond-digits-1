@@ -18,9 +18,9 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-8 leading-tight">
-            A melhor empresa de{" "}
-            <span className="text-planning-green">contabilidade corporativa</span>{" "}
-            multissetorial do Brasil
+            Excelência em{" "}
+            <span className="text-planning-green">contabilidade</span>{" "}
+            com atendimento personalizado
           </h1>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
@@ -38,26 +38,26 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <h3 className="text-3xl lg:text-4xl font-bold text-planning-green">
-                +50 bilhões
+                +15 anos
               </h3>
               <p className="text-neutral-300 font-medium">
-                de faturamento sob gestão
+                de experiência em contabilidade
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="text-3xl lg:text-4xl font-bold text-planning-green">
-                +18.000
+                +500
               </h3>
               <p className="text-neutral-300 font-medium">
-                colaboradores sob gestão
+                clientes atendidos
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="text-3xl lg:text-4xl font-bold text-planning-green">
-                NPS 90
+                100%
               </h3>
               <p className="text-neutral-300 font-medium">
-                em zona de excelência
+                digital e eficiente
               </p>
             </div>
           </div>

@@ -4,34 +4,28 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const PartnersSection = () => {
   const partners = [
     {
-      name: "Elton Silva",
-      role: "Líder de Auditoria",
-      bio: "Especialista em auditoria corporativa com mais de 15 anos de experiência em empresas de grande porte.",
-      initials: "ES"
+      name: "Lucimara Rocha",
+      role: "Contadora Responsável",
+      bio: "Contadora experiente com mais de 15 anos de atuação, especializada em contabilidade empresarial e consultoria tributária.",
+      initials: "LR"
     },
     {
-      name: "Fabio Baptista",
-      role: "Sócio da Unidade RJ",
-      bio: "Responsável pela expansão e operações da Planning no Rio de Janeiro, com foco em grandes corporações.",
-      initials: "FB"
+      name: "Ana Paula Santos",
+      role: "Supervisora Contábil",
+      bio: "Responsável pela supervisão das rotinas contábeis e fiscais, garantindo qualidade e pontualidade nos serviços.",
+      initials: "AS"
     },
     {
-      name: "Pedro Araújo",
-      role: "CEO",
-      bio: "Fundador e CEO da Planning, lidera a estratégia de crescimento e inovação da empresa.",
-      initials: "PA"
+      name: "Carlos Eduardo Lima",
+      role: "Consultor Tributário",
+      bio: "Especialista em planejamento tributário e legislação fiscal, auxiliando empresas na otimização de impostos.",
+      initials: "CL"
     },
     {
-      name: "Tiago Macário",
-      role: "Contabilidade",
-      bio: "Especialista em contabilidade corporativa e planejamento tributário para empresas multissetoriais.",
-      initials: "TM"
-    },
-    {
-      name: "João Mateus Nogueira",
-      role: "Assessor Societário, M&A",
-      bio: "Expert em fusões, aquisições e reestruturações societárias, assessorando grandes transações.",
-      initials: "JM"
+      name: "Mariana Costa",
+      role: "Analista Fiscal",
+      bio: "Focada em obrigações acessórias e compliance fiscal, mantendo empresas em conformidade com a legislação.",
+      initials: "MC"
     }
   ];
 
@@ -40,10 +34,10 @@ const PartnersSection = () => {
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-sm font-semibold text-planning-green uppercase tracking-wider mb-4">
-            NOSSA LIDERANÇA
+            NOSSA EQUIPE
           </h2>
           <h3 className="text-4xl lg:text-5xl font-bold text-neutral-900 font-heading">
-            Sócios
+            Profissionais
           </h3>
         </div>
 

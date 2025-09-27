@@ -20,17 +20,17 @@ const CredibilitySection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-sm font-semibold text-planning-green uppercase tracking-wider mb-4">
-                PARCERIA GLOBAL
+                QUALIDADE COMPROVADA
               </h2>
               <h3 className="text-4xl lg:text-5xl font-bold text-neutral-900 font-heading mb-6">
                 Confiança e{" "}
                 <span className="text-planning-green">Credibilidade</span>
               </h3>
               <p className="text-lg text-neutral-600 leading-relaxed mb-8">
-                Somos membros da <strong>PrimeGlobal</strong>, uma das maiores 
-                redes globais de auditoria e contabilidade do mundo. Essa parceria 
-                estratégica nos permite oferecer serviços de classe mundial com 
-                padrões internacionais de qualidade e excelência.
+                Com registro no <strong>CRC</strong> e certificações profissionais, 
+                oferecemos serviços contábeis com total segurança jurídica. 
+                Nossa expertise e comprometimento garantem a tranquilidade 
+                que sua empresa precisa para crescer com solidez.
               </p>
             </div>
 
@@ -41,10 +41,10 @@ const CredibilitySection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-2">
-                    Rede Global
+                    Registro CRC
                   </h4>
                   <p className="text-sm text-neutral-600">
-                    Presença em mais de 100 países
+                    Profissional habilitada e regularizada
                   </p>
                 </div>
               </div>
@@ -55,10 +55,10 @@ const CredibilitySection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-2">
-                    Padrões Internacionais
+                    Atualização Constante
                   </h4>
                   <p className="text-sm text-neutral-600">
-                    Qualidade certificada mundialmente
+                    Educação continuada e conhecimento atualizado
                   </p>
                 </div>
               </div>
@@ -69,10 +69,10 @@ const CredibilitySection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-2">
-                    Excelência Comprovada
+                    Resultados Comprovados
                   </h4>
                   <p className="text-sm text-neutral-600">
-                    Reconhecimento internacional
+                    15+ anos de experiência e clientes satisfeitos
                   </p>
                 </div>
               </div>
@@ -91,14 +91,14 @@ const CredibilitySection = () => {
                 <div className="w-64 h-64 bg-white rounded-full flex items-center justify-center">
                   <div className="text-center">
                     <h4 className="text-4xl font-bold text-neutral-900 font-heading mb-2">
-                      Planning
+                      Lucimara
                     </h4>
                     <div className="w-16 h-0.5 bg-planning-green mx-auto mb-4"></div>
                     <p className="text-planning-green font-semibold text-lg">
-                      PrimeGlobal
+                      Rocha
                     </p>
                     <p className="text-neutral-600 text-sm">
-                      Member Firm
+                      Contabilidade
                     </p>
                   </div>
                 </div>

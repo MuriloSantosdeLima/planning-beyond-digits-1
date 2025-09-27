@@ -3,46 +3,10 @@ import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react
 const Footer = () => {
   const offices = [
     {
-      city: "Goiânia - GO",
-      address: "Rua Principal, 123 - Centro",
-      phone: "(62) 3000-0000",
-      email: "goiania@planning.com.br"
-    },
-    {
-      city: "São Paulo - SP", 
-      address: "Av. Paulista, 456 - Bela Vista",
-      phone: "(11) 3000-0000",
-      email: "saopaulo@planning.com.br"
-    },
-    {
-      city: "Rio de Janeiro - RJ",
-      address: "Av. Copacabana, 789 - Copacabana", 
-      phone: "(21) 3000-0000",
-      email: "rio@planning.com.br"
-    },
-    {
-      city: "Cuiabá - MT",
-      address: "Av. Central, 321 - Centro",
-      phone: "(65) 3000-0000", 
-      email: "cuiaba@planning.com.br"
-    },
-    {
-      city: "Patos de Minas - MG",
-      address: "Rua Comercial, 654 - Centro",
-      phone: "(34) 3000-0000",
-      email: "patos@planning.com.br"
-    },
-    {
-      city: "Curitiba - PR",
-      address: "Rua das Flores, 987 - Centro",
-      phone: "(41) 3000-0000",
-      email: "curitiba@planning.com.br"
-    },
-    {
-      city: "Belém - PA",
-      address: "Av. Nazaré, 147 - Nazaré", 
-      phone: "(91) 3000-0000",
-      email: "belem@planning.com.br"
+      city: "Escritório Principal",
+      address: "Rua das Flores, 123 - Centro",
+      phone: "(11) 9999-9999",
+      email: "contato@lucimaraocha.com.br"
     }
   ];
 
@@ -61,9 +25,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div>
-              <h3 className="text-2xl font-bold font-heading mb-4">Planning</h3>
+              <h3 className="text-2xl font-bold font-heading mb-4">Lucimara Rocha</h3>
               <p className="text-neutral-300 leading-relaxed">
-                A melhor empresa de contabilidade corporativa multissetorial do Brasil.
+                Escritório de contabilidade com excelência em atendimento e soluções personalizadas.
               </p>
             </div>
 
@@ -95,7 +59,7 @@ const Footer = () => {
 
           {/* Offices Grid */}
           <div className="lg:col-span-3">
-            <h4 className="font-semibold mb-6 text-lg">Nossas Unidades</h4>
+            <h4 className="font-semibold mb-6 text-lg">Contato</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {offices.map((office, index) => (
                 <div key={index} className="space-y-3">
@@ -140,7 +104,7 @@ const Footer = () => {
 
             {/* Credits */}
             <div className="text-sm text-neutral-400 text-center lg:text-right">
-              <p className="mb-1">© 2024 Planning. Todos os direitos reservados.</p>
+              <p className="mb-1">© 2024 Lucimara Rocha Contabilidade. Todos os direitos reservados.</p>
               <p>Website desenvolvido por <span className="text-planning-green font-semibold">ELTON</span></p>
             </div>
           </div>

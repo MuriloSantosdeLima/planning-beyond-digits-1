@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-neutral-900 font-heading">
-              Planning
+              Lucimara Rocha
             </h1>
           </div>
 

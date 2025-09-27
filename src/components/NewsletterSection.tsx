@@ -68,24 +68,24 @@ const NewsletterSection = () => {
                   <span className="text-planning-green">Newsletter!</span>
                 </h3>
                 <p className="text-lg text-neutral-600 leading-relaxed">
-                  Receba insights exclusivos sobre contabilidade corporativa, 
-                  tributação, compliance e as últimas tendências do mercado 
-                  diretamente em sua caixa de entrada.
+                Receba dicas valiosas sobre contabilidade, tributação, 
+                gestão financeira e as principais mudanças na legislação 
+                diretamente em seu e-mail.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-planning-green">500+</div>
-                  <div className="text-sm text-neutral-600">Empresas Atendidas</div>
+                  <div className="text-sm text-neutral-600">Clientes Atendidos</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-planning-green">15+</div>
                   <div className="text-sm text-neutral-600">Anos de Experiência</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-planning-green">98%</div>
-                  <div className="text-sm text-neutral-600">Satisfação Cliente</div>
+                  <div className="text-2xl font-bold text-planning-green">100%</div>
+                  <div className="text-sm text-neutral-600">Digital e Eficiente</div>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ const NewsletterSection = () => {
                 </Button>
 
                 <p className="text-xs text-neutral-500 leading-relaxed">
-                  Ao se inscrever, você concorda em receber e-mails da Planning. 
+                  Ao se inscrever, você concorda em receber e-mails da Lucimara Rocha Contabilidade. 
                   Você pode cancelar a inscrição a qualquer momento.
                 </p>
               </form>
