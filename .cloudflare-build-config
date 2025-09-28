@@ -1,0 +1,7 @@
+# Cloudflare Pages Build Configuration
+# Force npm usage instead of bun
+
+BUILD_COMMAND=npm install --legacy-peer-deps && npm run build
+BUILD_OUTPUT_DIRECTORY=dist
+NODE_VERSION=22.16.0
+PACKAGE_MANAGER=npm
