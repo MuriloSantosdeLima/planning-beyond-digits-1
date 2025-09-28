@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/afb89a44-74ef-4621-8d74-ee5b554dabc3
+**URL**: https://lovable.dev/projects/e6badf4b-e046-4d43-ab59-73e1c72a9dc6
 
 ## How can I edit this code?
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/afb89a44-74ef-4621-8d74-ee5b554dabc3) and start prompting.
+Simply visit the [Lovable Project](https://lovable.dev/projects/e6badf4b-e046-4d43-ab59-73e1c72a9dc6) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -62,7 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/afb89a44-74ef-4621-8d74-ee5b554dabc3) and click on Share -> Publish.
+Simply open [Lovable](https://lovable.dev/projects/e6badf4b-e046-4d43-ab59-73e1c72a9dc6) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
@@ -71,3 +71,9 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Build e pré-renderização para SEO
+
+- `npm run build` gera os assets estáticos, compila uma versão SSR (`dist-ssr`) e executa `scripts/prerender.js`.
+- O script injeta o HTML renderizado em `dist/index.html` e cria `dist/404.html`, deixando o conteúdo completo disponível sem depender de JavaScript para ser indexado.
+- Os bundles JavaScript continuam disponíveis para hidratação e interatividade após o carregamento inicial.

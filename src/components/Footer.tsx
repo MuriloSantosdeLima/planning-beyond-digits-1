@@ -1,112 +1,93 @@
-import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { Heart, Instagram, Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
-  const offices = [
-    {
-      city: "Escritório Principal",
-      address: "Rua das Flores, 123 - Centro",
-      phone: "(11) 9999-9999",
-      email: "contato@lucimaraocha.com.br"
-    }
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: MessageCircle, href: "#", label: "WhatsApp" }
   ];
 
-  const legalLinks = [
-    "Trabalhe Conosco",
-    "Fale Conosco", 
-    "Política de Privacidade",
-    "Política de Cookies"
+  const quickLinks = [
+    { name: "Início", href: "#home" },
+    { name: "Sobre", href: "#about" },
+    { name: "Galeria", href: "#gallery" },
+    { name: "Serviços", href: "#services" },
+    { name: "Contato", href: "#contact" }
   ];
 
   return (
-    <footer className="bg-neutral-900 text-white">
-      <div className="max-w-container mx-auto px-6 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1 space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold font-heading mb-4">Lucimara Rocha</h3>
-              <p className="text-neutral-300 leading-relaxed">
-                Escritório de contabilidade com excelência em atendimento e soluções personalizadas.
-              </p>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h4 className="font-semibold mb-4">Siga-nos</h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-planning-green transition-colors duration-fast"
+    <footer className="bg-foreground text-background">
+      <div className="container mx-auto px-4 lg:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* Brand */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="font-script text-2xl font-bold mb-4 text-primary">
+              Celma Belas Artes
+            </h3>
+            <p className="text-background/80 mb-6 max-w-md leading-relaxed">
+              Transformando fios em sonhos desde 2019. Cada peça é criada com 
+              amor, dedicação e o compromisso de trazer beleza e exclusividade 
+              para sua vida.
+            </p>
+            
+            <div className="flex gap-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="bg-background/10 hover:bg-primary/20 p-2 rounded-lg transition-colors duration-300 group"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <social.icon className="h-5 w-5 text-background group-hover:text-primary transition-colors" />
                 </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-planning-green transition-colors duration-fast"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-planning-green transition-colors duration-fast"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Offices Grid */}
-          <div className="lg:col-span-3">
-            <h4 className="font-semibold mb-6 text-lg">Contato</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {offices.map((office, index) => (
-                <div key={index} className="space-y-3">
-                  <h5 className="font-semibold text-planning-green">
-                    {office.city}
-                  </h5>
-                  <div className="space-y-2 text-sm text-neutral-300">
-                    <div className="flex items-start space-x-2">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      <span>{office.address}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Phone className="w-4 h-4 flex-shrink-0" />
-                      <span>{office.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Mail className="w-4 h-4 flex-shrink-0" />
-                      <span>{office.email}</span>
-                    </div>
-                  </div>
-                </div>
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4 text-primary">Links Rápidos</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-background/80 hover:text-primary transition-colors duration-200"
+                  >
+                    {link.name}
+                  </a>
+                </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold mb-4 text-primary">Contato</h4>
+            <div className="space-y-2 text-background/80">
+              <p>São Paulo, SP</p>
+              <p>(11) 99999-9999</p>
+              <p>contato@celmabelasartes.com</p>
+              <div className="mt-4">
+                <p className="text-sm">Seg - Sex: 9h às 18h</p>
+                <p className="text-sm">Sáb: 9h às 14h</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-neutral-800 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            {/* Legal Links */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-              {legalLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="text-sm text-neutral-300 hover:text-planning-green transition-colors duration-fast"
-                >
-                  {link}
-                </a>
-              ))}
-            </div>
-
-            {/* Credits */}
-            <div className="text-sm text-neutral-400 text-center lg:text-right">
-              <p className="mb-1">© 2024 Lucimara Rocha Contabilidade. Todos os direitos reservados.</p>
-              <p>Website desenvolvido por <span className="text-planning-green font-semibold">ELTON</span></p>
-            </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-background/60 text-sm">
+            © {currentYear} Celma Belas Artes. Todos os direitos reservados.
+          </p>
+          
+          <div className="flex items-center gap-2 text-sm text-background/80">
+            <span>Feito com</span>
+            <Heart className="h-4 w-4 text-primary fill-current" />
+            <span>e muito carinho</span>
           </div>
         </div>
       </div>

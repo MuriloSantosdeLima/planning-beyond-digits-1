@@ -1,15 +1,24 @@
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Gallery from "@/components/Gallery";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          Planning Beyond Digits
-        </h1>
-        <p className="text-lg text-muted-foreground">
-          Teste - Se você está vendo isso, o React está funcionando!
-        </p>
-      </div>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Gallery />
+        <Services />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 };
 

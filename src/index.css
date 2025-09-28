@@ -2,80 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Planning Corporate Design System - Modern, professional, trustworthy */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/inter-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/playfair-display-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/playfair-display-italic-400.woff2") format("woff2");
+}
+
+/* Celma Belas Artes Design System 
+Premium crafts brand with elegant floral identity
+All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
-    /* Corporate Color Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
-    
-    /* Brand Colors */
-    --planning-green: 160 100% 38%; /* #00C48C - Primary brand color */
-    --planning-green-light: 160 100% 45%;
-    --planning-green-dark: 160 100% 30%;
-    
-    /* Neutral Palette */
-    --neutral-50: 0 0% 98%;
-    --neutral-100: 0 0% 96%;
-    --neutral-200: 0 0% 90%;
-    --neutral-300: 0 0% 83%;
-    --neutral-400: 0 0% 64%;
-    --neutral-500: 0 0% 45%;
-    --neutral-600: 0 0% 32%;
-    --neutral-700: 0 0% 25%;
-    --neutral-800: 0 0% 15%;
-    --neutral-900: 0 0% 8%;
+    /* Brand Colors - Celma Belas Artes */
+    --background: 28 25% 97%;
+    --foreground: 30 15% 25%;
 
-    /* Semantic Color System */
-    --primary: var(--planning-green);
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: var(--planning-green-dark);
-    
-    --secondary: var(--neutral-100);
-    --secondary-foreground: var(--neutral-900);
-    
-    --accent: var(--neutral-50);
-    --accent-foreground: var(--neutral-900);
-    
-    --muted: var(--neutral-100);
-    --muted-foreground: var(--neutral-600);
-    
-    --card: 0 0% 100%;
-    --card-foreground: var(--neutral-900);
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: var(--neutral-900);
-    
-    --border: var(--neutral-200);
-    --input: var(--neutral-200);
-    --ring: var(--planning-green);
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --card: 28 30% 99%;
+    --card-foreground: 30 15% 25%;
 
-    /* Typography Scale */
-    --font-heading: 'Inter', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --popover: 28 30% 99%;
+    --popover-foreground: 30 15% 25%;
+
+    /* Golden accents for premium feel */
+    --primary: 45 85% 58%;
+    --primary-foreground: 28 25% 97%;
+
+    /* Soft mint green from the logo */
+    --secondary: 160 35% 75%;
+    --secondary-foreground: 30 15% 25%;
+
+    /* Warm cream tones */
+    --muted: 35 20% 94%;
+    --muted-foreground: 30 12% 55%;
+
+    /* Elegant warm accent */
+    --accent: 35 25% 88%;
+    --accent-foreground: 30 15% 25%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 28 25% 97%;
+
+    --border: 35 15% 90%;
+    --input: 35 15% 90%;
+    --ring: 45 85% 58%;
     
-    /* Spacing & Layout */
-    --section-padding: 5rem;
-    --container-max: 1200px;
+    /* Premium Gradients */
+    --gradient-golden: linear-gradient(135deg, hsl(45, 85%, 58%), hsl(40, 80%, 65%));
+    --gradient-cream: linear-gradient(180deg, hsl(28, 25%, 97%), hsl(35, 20%, 94%));
+    --gradient-mint: linear-gradient(135deg, hsl(160, 35%, 75%), hsl(160, 30%, 80%));
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1);
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--neutral-800) / 0.9), hsl(var(--neutral-900) / 0.8));
-    --gradient-planning: linear-gradient(135deg, hsl(var(--planning-green)), hsl(var(--planning-green-light)));
-    
-    /* Animations */
-    --transition-fast: 0.15s ease-out;
-    --transition-normal: 0.3s ease-out;
-    --transition-slow: 0.5s ease-out;
+    /* Elegant Shadows */
+    --shadow-soft: 0 4px 20px -5px hsl(45, 85%, 58% / 0.15);
+    --shadow-premium: 0 8px 40px -10px hsl(45, 85%, 58% / 0.2);
+    --shadow-card: 0 2px 15px -3px hsl(30, 15%, 25% / 0.08);
 
     --radius: 0.5rem;
 
@@ -97,33 +96,43 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warm premium tones */
+    --background: 30 15% 12%;
+    --foreground: 28 25% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 15% 15%;
+    --card-foreground: 28 25% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 15% 15%;
+    --popover-foreground: 28 25% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 45 85% 65%;
+    --primary-foreground: 30 15% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 160 25% 35%;
+    --secondary-foreground: 28 25% 97%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 10% 18%;
+    --muted-foreground: 30 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 15% 20%;
+    --accent-foreground: 28 25% 97%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 28 25% 97%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 45 85% 65%;
+    
+    /* Dark mode gradients */
+    --gradient-golden: linear-gradient(135deg, hsl(45, 85%, 65%), hsl(40, 80%, 70%));
+    --gradient-cream: linear-gradient(180deg, hsl(30, 15%, 12%), hsl(30, 10%, 18%));
+    --gradient-mint: linear-gradient(135deg, hsl(160, 25%, 35%), hsl(160, 20%, 40%));
+    
+    --shadow-soft: 0 4px 20px -5px hsl(45, 85%, 65% / 0.2);
+    --shadow-premium: 0 8px 40px -10px hsl(45, 85%, 65% / 0.25);
+    --shadow-card: 0 2px 15px -3px hsl(0, 0%, 0% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -141,6 +150,75 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-script {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Premium Animation Classes */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+  
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .bg-gradient-golden {
+    background: var(--gradient-golden);
+  }
+  
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+  
+  .bg-gradient-mint {
+    background: var(--gradient-mint);
+  }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

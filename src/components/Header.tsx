@@ -1,97 +1,83 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    "Sobre",
-    "Áreas de Atuação",
-    "Verticais de Negócio",
-    "Parcerias",
-    "Cases",
-    "Contato"
+  const navigation = [
+    { name: "Início", href: "#home" },
+    { name: "Sobre", href: "#about" },
+    { name: "Galeria", href: "#gallery" },
+    { name: "Serviços", href: "#services" },
+    { name: "Contato", href: "#contact" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 transition-all duration-normal">
-      <div className="max-w-container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-neutral-900 font-heading">
-              Lucimara Rocha
-            </h1>
+          <div className="flex-shrink-0">
+            <a href="#home" className="font-script text-2xl font-semibold text-primary">
+              Celma Belas Artes
+            </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {menuItems.map((item) => (
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
               <a
-                key={item}
-                href="#"
-                className="text-neutral-700 hover:text-planning-green transition-colors duration-fast font-medium"
+                key={item.name}
+                href={item.href}
+                className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Language Toggle */}
-            <div className="flex items-center space-x-2">
-              <button className="p-2 hover:bg-neutral-100 rounded-lg transition-colors duration-fast">
-                <img src="https://flagcdn.com/24x18/br.png" alt="BR" className="w-6 h-4" />
-              </button>
-              <button className="p-2 hover:bg-neutral-100 rounded-lg transition-colors duration-fast">
-                <img src="https://flagcdn.com/24x18/us.png" alt="US" className="w-6 h-4" />
-              </button>
-            </div>
-            
-            <Button variant="cta" size="lg">
-              SOLICITAR PROPOSTA
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Button variant="premium" size="sm">
+              Fazer Pedido
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors duration-fast"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-neutral-100 pt-4">
-            <div className="flex flex-col space-y-4">
-              {menuItems.map((item) => (
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg">
+            <nav className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
                 <a
-                  key={item}
-                  href="#"
-                  className="text-neutral-700 hover:text-planning-green transition-colors duration-fast font-medium py-2"
+                  key={item.name}
+                  href={item.href}
+                  className="block text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
-              <div className="flex items-center justify-between pt-4">
-                <div className="flex items-center space-x-2">
-                  <button className="p-2 hover:bg-neutral-100 rounded-lg transition-colors duration-fast">
-                    <img src="https://flagcdn.com/24x18/br.png" alt="BR" className="w-6 h-4" />
-                  </button>
-                  <button className="p-2 hover:bg-neutral-100 rounded-lg transition-colors duration-fast">
-                    <img src="https://flagcdn.com/24x18/us.png" alt="US" className="w-6 h-4" />
-                  </button>
-                </div>
-                <Button variant="cta" size="lg">
-                  SOLICITAR PROPOSTA
+              <div className="pt-4">
+                <Button variant="premium" className="w-full">
+                  Fazer Pedido
                 </Button>
               </div>
-            </div>
-          </nav>
+            </nav>
+          </div>
         )}
       </div>
     </header>
