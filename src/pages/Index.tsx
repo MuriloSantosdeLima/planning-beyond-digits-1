@@ -1,27 +1,14 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import PartnersSection from "@/components/PartnersSection";
-import PurposeSection from "@/components/PurposeSection";
-import TimelineSection from "@/components/TimelineSection";
-import CredibilitySection from "@/components/CredibilitySection";
-import NewsletterSection from "@/components/NewsletterSection";
-import Footer from "@/components/Footer";
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <PartnersSection />
-        <PurposeSection />
-        <TimelineSection />
-        <CredibilitySection />
-        <NewsletterSection />
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-foreground mb-4">
+          Planning Beyond Digits
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          Teste - Se você está vendo isso, o React está funcionando!
+        </p>
+      </div>
     </div>
   );
 };
