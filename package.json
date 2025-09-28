@@ -9,7 +9,9 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postinstall": "echo 'Dependencies installed successfully'"
+    "postinstall": "echo 'Dependencies installed successfully'",
+    "install:cloudflare": "npm install --legacy-peer-deps",
+    "build:cloudflare": "npm run install:cloudflare && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
